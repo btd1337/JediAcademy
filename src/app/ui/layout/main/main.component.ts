@@ -1,3 +1,4 @@
+import { Student } from './../../../student/student.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,17 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  jedisName: string[] = ['Yoda', 'Mace Windu', 'Qui-Gon Jinn', 'Obi-Wan Kenobi', 'Anakin Skywalker', 'Luke Skywalker'];
+  jedis: Student[];
+
+  constructor() {
+    this.jedis = new Array<Student>();
+    this.createJedis();
+  }
 
   ngOnInit() {
   }
 
-  createRange(number) {
-    const items: number[] = [];
-    for (let i = 1; i <= number; i++) {
-       items.push(i);
+  createJedis() {
+    for (const name of this.jedisName) {
+      const jedi = {name: name, isJedi: true, temple: 'Coruscant'};
+      this.jedis.push(jedi);
     }
-    return items;
   }
 
 }
