@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "./app/ui/layout/main/main.component.css";
+
+/* .header {
+	display: block;
+	position: fixed;
+	width: 100%;
+}
+
+.sidenav {
+	position: fixed;
+	height: 91vh;
+} */
