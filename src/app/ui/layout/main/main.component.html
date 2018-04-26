@@ -1,10 +1,10 @@
 <!-- <div class="content-container"> -->
   <div class="content-area">
-    <ul class="list">
-      <li *ngFor="let jedi of jedis">
+    <div class="row">
+      <div *ngFor="let jedi of jedis" class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
         <jad-student [student]=jedi></jad-student>
-      </li>
-    </ul>
+      </div>
+    </div>
   </div>
   <jad-sidebar class="sidenav"></jad-sidebar>
 <!-- </div> -->
